@@ -1,0 +1,62 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5275"
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "Connection_String": "Host=localhost;Port=5432;Database=MotorDiniz;Username=postgres;Password=motor123",
+            "MassTransit_Server": "host.docker.internal",
+            "MassTransit_User": "guest",
+            "MassTransit_Password": "guest",
+            "MassTransit_Queue_MotorcycleQueue": "motorcycle-queue",
+            "Minio__Endpoint": "localhost:9000",
+            "Minio__AccessKey": "admin",
+            "Minio__SecretKey": "admin12345",
+            "Minio__UseSSL": "false",
+            "Minio__BucketCnh": "cnh-images"
+        },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7285;http://localhost:5275"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "8081",
+        "ASPNETCORE_HTTP_PORTS": "8080"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:13472",
+      "sslPort": 44368
+    }
+  }
+}

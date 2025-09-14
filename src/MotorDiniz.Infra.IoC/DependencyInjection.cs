@@ -47,9 +47,9 @@ namespace MotorDiniz.Infra.IoC
 
             //Connection-DB
 
-             //var connectionString = Environment.GetEnvironmentVariable("Connection_String");
+            var connectionString = Environment.GetEnvironmentVariable("Connection_String");
            
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            //var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             if (string.IsNullOrWhiteSpace(connectionString))
                 throw new InvalidOperationException("Connection string not found.");
